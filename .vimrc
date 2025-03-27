@@ -29,3 +29,8 @@ let g:ale_linter_aliases = {'conf': []}
 colo seoul256
 
 set number
+
+" Create directory if it doesn't exist
+silent !mkdir -p ~/.vim/swap
+" Set swap file directory
+set directory=~/.vim/swap//
