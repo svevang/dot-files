@@ -8,7 +8,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 . "$HOME/.cargo/env"
 
 # PATH additions
-export PATH="/Users/samvevangsam/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin/claude:$PATH"
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 export PATH="$HOME/local/bin:$PATH"
