@@ -13,13 +13,10 @@ export PATH="$HOME/.local/bin/claude:$PATH"
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 export PATH="$HOME/local/bin:$PATH"
 
-# Mise - shims for non-interactive shells
-eval "$(~/.local/bin/mise activate bash --shims)"
-
-# Exit here if non-interactive
+# Exit here if non-interactive (with shims only, skip if already in mise)
 case $- in
   *i*) ;;
-    *) return;;
+    *) [[ -z "$MISE_SHELL" ]] && eval "$(~/.local/bin/mise activate bash --shims)"; return;;
 esac
 
 # ---- Interactive-only below ----
